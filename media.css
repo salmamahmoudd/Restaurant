@@ -1,0 +1,118 @@
+/* ==========================
+   Media Queries
+========================== */
+
+/* Tablet - max-width: 992px */
+@media screen and (max-width: 992px) {
+
+    /* Navbar */
+    #navbar {
+        padding: 10px 30px;
+    }
+    #navbar ul {
+        gap: 20px;
+    }
+
+    /* About Section */
+    #about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    #about .about-content img {
+        margin-top: 20px;
+        max-width: 100%;
+        width: 350px;
+    }
+
+    /* Offers Section */
+    #offers .offers-items {
+        justify-content: center;
+        gap: 20px;
+    }
+    #offers .offers-items div {
+        flex: 1 1 45%;
+    }
+
+    /* Menu Section */
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Daytime Section */
+    .daytime-items {
+        gap: 20px;
+    }
+}
+
+/* Mobile - max-width: 576px */
+@media screen and (max-width: 576px) {
+
+    /* Navbar */
+    #hamburger {
+        display: block;
+    }
+    #navbar ul {
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        width: 200px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        display: none; 
+        border-radius: 0 0 10px 10px;
+    }
+
+    #navbar ul.show {
+        display: flex;
+    }
+
+    #navbar ul li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #navbar ul li a {
+        width: 100%;
+        padding: 10px;
+    }
+    /* About Section */
+    #about .about-content div {
+        flex: 1 1 100%;
+    }
+    #about .about-content img {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* Offers Section */
+    #offers .offers-items div {
+        flex: 1 1 100%;
+    }
+    #offers .offers-items img {
+        height: 180px;
+    }
+
+    /* Menu Section */
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+    .menu-item img {
+        height: 200px;
+    }
+
+    /* Daytime Section */
+    .daytime-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Gallery */
+    .img-gallery img {
+        width: 100%;
+        max-width: 280px;
+        height: 180px;
+    }
+}
