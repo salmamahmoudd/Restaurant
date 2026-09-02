@@ -1,118 +1,1295 @@
-/* ==========================
-   Media Queries
-========================== */
+/* =========================================================
+   TASTEIFY RESTAURANT — RESPONSIVE 2026
+   TABLET + MOBILE
+========================================================= */
 
-/* Tablet - max-width: 992px */
-@media screen and (max-width: 992px) {
 
-    /* Navbar */
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .container {
+        width: min(940px, calc(100% - 40px));
+    }
+
     #navbar {
-        padding: 10px 30px;
-    }
-    #navbar ul {
-        gap: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
-    /* About Section */
-    #about .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    #about .about-content img {
-        margin-top: 20px;
-        max-width: 100%;
-        width: 350px;
+    #nav-links {
+        gap: 2px;
     }
 
-    /* Offers Section */
-    #offers .offers-items {
-        justify-content: center;
-        gap: 20px;
-    }
-    #offers .offers-items div {
-        flex: 1 1 45%;
+    #nav-links a {
+        padding: 8px 9px;
+        font-size: 12px;
     }
 
-    /* Menu Section */
+    .nav-btn {
+        padding: 9px 14px;
+        font-size: 11px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(55px, 8vw, 82px);
+    }
+
+    .about-content {
+        gap: 55px;
+    }
+
     .menu-items {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
     }
 
-    /* Daytime Section */
-    .daytime-items {
-        gap: 20px;
+    .offers-items {
+        gap: 18px;
+    }
+
+    .contact-wrapper {
+        gap: 50px;
     }
 }
 
-/* Mobile - max-width: 576px */
-@media screen and (max-width: 576px) {
 
-    /* Navbar */
-    #hamburger {
-        display: block;
-    }
-    #navbar ul {
-        position: absolute;
-        top: 60px; 
-        right: 0;
-        background: rgba(0,0,0,0.9);
-        width: 200px;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
-        display: none; 
-        border-radius: 0 0 10px 10px;
-    }
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
 
-    #navbar ul.show {
+@media screen and (max-width: 900px) {
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    #navbar {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 70px;
+
+        padding: 0 20px;
+
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        z-index: 999999;
+
+        background: rgba(12, 8, 8, 0.88);
+
+        border-bottom:
+            1px solid rgba(225, 190, 116, 0.10);
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        box-shadow:
+            0 8px 30px rgba(0, 0, 0, 0.18);
+
+        transition:
+            height 0.35s ease,
+            background 0.35s ease,
+            box-shadow 0.35s ease;
     }
 
-    #navbar ul li {
-        width: 100%;
-        margin-bottom: 10px;
+
+    /* =====================================================
+       SCROLLED NAVBAR
+    ===================================================== */
+
+    #navbar.scrolled {
+        height: 64px;
+
+        background: rgba(12, 8, 8, 0.97);
+
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.35);
     }
 
-    #navbar ul li a {
-        width: 100%;
-        padding: 10px;
-    }
-    /* About Section */
-    #about .about-content div {
-        flex: 1 1 100%;
-    }
-    #about .about-content img {
-        width: 100%;
-        margin-top: 15px;
+
+    /* =====================================================
+       BRAND
+    ===================================================== */
+
+    .brand {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 9px;
+
+        font-size: 21px;
+
+        white-space: nowrap;
+
+        z-index: 1001;
     }
 
-    /* Offers Section */
-    #offers .offers-items div {
-        flex: 1 1 100%;
-    }
-    #offers .offers-items img {
-        height: 180px;
+
+    .brand img {
+        width: 38px;
+        height: 38px;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+
+        border:
+            1px solid rgba(225, 190, 116, 0.35);
+
+        box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.25);
     }
 
-    /* Menu Section */
-    .menu-items {
-        grid-template-columns: 1fr;
-    }
-    .menu-item img {
-        height: 200px;
+
+    /* =====================================================
+       HAMBURGER BUTTON
+    ===================================================== */
+
+    #hamburger {
+        position: relative;
+
+        width: 44px;
+        height: 44px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        padding: 0;
+
+        color: var(--primary);
+
+        background:
+            rgba(225, 190, 116, 0.07);
+
+        border:
+            1px solid rgba(225, 190, 116, 0.22);
+
+        border-radius: 13px;
+
+        cursor: pointer;
+
+        z-index: 1002;
+
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.25);
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        transition:
+            background 0.3s ease,
+            border-color 0.3s ease,
+            box-shadow 0.3s ease,
+            transform 0.3s ease;
     }
 
-    /* Daytime Section */
-    .daytime-items {
+
+    /* =====================================================
+       HAMBURGER HOVER
+    ===================================================== */
+
+    #hamburger:hover {
+        background:
+            rgba(225, 190, 116, 0.13);
+
+        border-color:
+            rgba(225, 190, 116, 0.42);
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.35);
+
+        transform: translateY(-1px);
+    }
+
+
+    /* =====================================================
+       HAMBURGER ICON
+    ===================================================== */
+
+    #hamburger i {
+        font-size: 17px;
+
+        color: var(--primary);
+
+        transition:
+            transform 0.3s ease,
+            color 0.3s ease;
+    }
+
+
+    /* =====================================================
+       ACTIVE HAMBURGER
+    ===================================================== */
+
+    #hamburger.active {
+        background:
+            rgba(225, 190, 116, 0.12);
+
+        border-color:
+            rgba(225, 190, 116, 0.40);
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+
+    #hamburger.active i {
+        transform: rotate(90deg);
+    }
+
+
+    /* =====================================================
+       COMPACT MOBILE MENU
+    ===================================================== */
+
+    #nav-links {
+        position: absolute;
+
+        top: calc(100% + 8px);
+        right: 16px;
+
+        width: 210px;
+        max-width: calc(100vw - 32px);
+
+        margin: 0;
+        padding: 7px;
+
+        display: flex;
         flex-direction: column;
+        align-items: stretch;
+
+        gap: 2px;
+
+        list-style: none;
+
+        background:
+            rgba(12, 8, 8, 0.98);
+
+        border:
+            1px solid rgba(225, 190, 116, 0.16);
+
+        border-radius: 14px;
+
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
+
+        box-shadow:
+            0 18px 45px rgba(0, 0, 0, 0.55);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform:
+            translateY(-8px)
+            scale(0.97);
+
+        transform-origin: top right;
+
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease,
+            transform 0.25s ease;
+
+        z-index: 1000;
+    }
+
+
+    /* =====================================================
+       OPEN MENU
+    ===================================================== */
+
+    #nav-links.show {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+
+    /* =====================================================
+       MENU ITEMS
+    ===================================================== */
+
+    #nav-links li {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex;
         align-items: center;
     }
 
-    /* Gallery */
-    .img-gallery img {
+
+    /* =====================================================
+       MENU LINKS
+       BACKGROUND ONLY AROUND THE WORD
+    ===================================================== */
+
+    #nav-links a {
+        position: relative;
+
+        display: inline-flex;
+        align-items: center;
+
+        width: fit-content;
+
+        min-height: auto;
+
+        padding: 8px 12px;
+
+        color: rgba(255, 255, 255, 0.82);
+
+        background: transparent;
+
+        border-radius: 7px;
+
+        font-size: 12px;
+
+        font-weight: 500;
+
+        line-height: 1;
+
+        text-decoration: none;
+
+        overflow: hidden;
+
+        transition:
+            color 0.2s ease,
+            background 0.2s ease,
+            transform 0.2s ease;
+    }
+
+
+    /* =====================================================
+       REMOVE OLD YELLOW LINES
+    ===================================================== */
+
+    #nav-links a::before,
+    #nav-links a::after {
+        content: none !important;
+
+        display: none !important;
+
+        width: 0 !important;
+        height: 0 !important;
+
+        background: none !important;
+
+        border: 0 !important;
+
+        box-shadow: none !important;
+
+        transform: none !important;
+    }
+
+
+    /* =====================================================
+       ACTIVE
+       GOLD BACKGROUND = WORD AREA ONLY
+    ===================================================== */
+
+    #nav-links a.active {
+        color: var(--primary);
+
+        background:
+            rgba(225, 190, 116, 0.10);
+
+        box-shadow:
+            inset 0 0 0 1px
+            rgba(225, 190, 116, 0.04);
+    }
+
+
+    /* =====================================================
+       HOVER
+    ===================================================== */
+
+    #nav-links a:hover {
+        color: var(--primary);
+
+        background:
+            rgba(225, 190, 116, 0.07);
+
+        transform: translateX(2px);
+    }
+
+
+    /* =====================================================
+       HIDE DESKTOP BOOKING BUTTON
+    ===================================================== */
+
+    .nav-btn {
+        display: none;
+    }
+
+
+    /* =====================================================
+       HOME / HERO
+    ===================================================== */
+
+    #home {
+        min-height: 100svh;
+
+        height: auto;
+
+        padding: 110px 0 70px;
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(8, 4, 4, 0.82),
+                rgba(8, 4, 4, 0.50),
+                rgba(8, 4, 4, 0.90)
+            ),
+            url("./images/home.png")
+            center center / cover no-repeat;
+
+        overflow: hidden;
+    }
+
+
+    #home::before {
+        z-index: 0;
+    }
+
+
+    .hero-content {
+        width: calc(100% - 35px);
+
+        margin-top: 35px;
+
+        z-index: 2;
+    }
+
+
+    .hero-tag {
+        margin-bottom: 20px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .hero-content h1 {
+        font-size: clamp(48px, 12vw, 76px);
+
+        letter-spacing: -2px;
+
+        line-height: 1;
+    }
+
+
+    .hero-content > p {
+        max-width: 600px;
+
+        font-size: 13px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .hero-info {
+        gap: 20px;
+
+        margin-top: 42px;
+    }
+
+
+    .hero-info strong {
+        font-size: 22px;
+    }
+
+
+    .hero-info span {
+        font-size: 8px;
+    }
+
+
+    .hero-divider {
+        height: 32px;
+    }
+
+
+    .scroll-indicator {
+        bottom: 16px;
+
+        z-index: 2;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    #about {
+        padding: 90px 0;
+    }
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+
+    .about-image {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+
+    .about-text {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       OFFERS
+    ===================================================== */
+
+    #offers {
+        padding: 90px 0;
+
+        background-attachment: scroll;
+    }
+
+
+    .offers-items {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 18px;
+    }
+
+
+    /* =====================================================
+       MENU
+    ===================================================== */
+
+    #menu {
+        padding: 90px 0;
+    }
+
+
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* =====================================================
+       DAYTIME
+    ===================================================== */
+
+    #daytime {
+        padding: 90px 0;
+
+        background-attachment: scroll;
+    }
+
+
+    .daytime-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    #gallery {
+        padding: 90px 0;
+    }
+
+
+    .img-gallery {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-auto-rows: 230px;
+    }
+
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6) {
+        grid-column: span 1;
+
+        grid-row: span 1;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    #contact {
+        padding: 90px 0;
+    }
+
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .contact-info {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+
+    #contact-form {
+        max-width: 700px;
+
         width: 100%;
-        max-width: 280px;
-        height: 180px;
+
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
+
+    .container {
+        width: calc(100% - 30px);
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    #navbar {
+        height: 66px;
+
+        padding: 0 15px;
+
+        z-index: 999999;
+    }
+
+
+    #navbar.scrolled {
+        height: 62px;
+    }
+
+
+    /* =====================================================
+       BRAND
+    ===================================================== */
+
+    .brand {
+        font-size: 20px;
+
+        gap: 8px;
+    }
+
+
+    .brand img {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    /* =====================================================
+       HAMBURGER
+    ===================================================== */
+
+    #hamburger {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 11px;
+    }
+
+
+    #hamburger i {
+        font-size: 16px;
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    #nav-links {
+        top: calc(100% + 7px);
+
+        right: 14px;
+
+        width: 195px;
+
+        max-width: calc(100vw - 28px);
+
+        padding: 6px;
+
+        border-radius: 13px;
+    }
+
+
+    /* =====================================================
+       MOBILE LINKS
+    ===================================================== */
+
+    #nav-links a {
+        min-height: auto;
+
+        padding: 7px 10px;
+
+        font-size: 11.5px;
+
+        border-radius: 7px;
+    }
+
+
+    #nav-links a.active {
+        background:
+            rgba(225, 190, 116, 0.10);
+    }
+
+
+    #nav-links a:hover {
+        padding-left: 10px;
+
+        transform: translateX(2px);
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    #home {
+        min-height: 100svh;
+
+        padding: 95px 0 60px;
+
+        background-position: center center;
+
+        background-size: cover;
+    }
+
+
+    .hero-content {
+        width: calc(100% - 28px);
+
+        margin-top: 20px;
+    }
+
+
+    .hero-tag {
+        padding: 8px 12px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    .hero-content h1 {
+        font-size: clamp(43px, 14vw, 62px);
+
+        letter-spacing: -2px;
+
+        line-height: 0.98;
+
+        margin-bottom: 20px;
+    }
+
+
+    .hero-content > p {
+        font-size: 12px;
+
+        line-height: 1.7;
+
+        margin-bottom: 25px;
+    }
+
+
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: center;
+
+        width: 100%;
+    }
+
+
+    .hero-actions .btn {
+        width: min(280px, 100%);
+    }
+
+
+    .hero-info {
+        gap: 14px;
+
+        margin-top: 35px;
+    }
+
+
+    .hero-info strong {
+        font-size: 18px;
+    }
+
+
+    .hero-info span {
+        font-size: 7px;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    .hero-divider {
+        height: 28px;
+    }
+
+
+    .scroll-indicator {
+        display: none;
+    }
+
+
+    /* =====================================================
+       SECTION HEADING
+    ===================================================== */
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    #about {
+        padding: 75px 0;
+    }
+
+
+    .about-image::before {
+        top: -10px;
+
+        left: -10px;
+
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .experience-card {
+        right: 10px;
+
+        bottom: 15px;
+
+        padding: 12px 15px;
+
+        border-radius: 14px;
+    }
+
+
+    .experience-card strong {
+        font-size: 27px;
+    }
+
+
+    .experience-card span {
+        font-size: 8px;
+    }
+
+
+    .about-text h3 {
+        font-size: 34px;
+    }
+
+
+    .about-text > p {
+        font-size: 13px;
+    }
+
+
+    .about-features {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    /* =====================================================
+       OFFERS
+    ===================================================== */
+
+    #offers {
+        padding: 75px 0;
+    }
+
+
+    .offers-items {
+        grid-template-columns: 1fr;
+    }
+
+
+    .offer-image {
+        height: 230px;
+    }
+
+
+    /* =====================================================
+       MENU
+    ===================================================== */
+
+    #menu {
+        padding: 75px 0;
+    }
+
+
+    .menu-items {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .menu-image {
+        height: 230px;
+    }
+
+
+    /* =====================================================
+       DAYTIME
+    ===================================================== */
+
+    #daytime {
+        padding: 75px 0;
+    }
+
+
+    .daytime-items {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+
+    .daytime-item {
+        padding: 20px 10px;
+    }
+
+
+    .daytime-item img {
+        width: 85px;
+        height: 85px;
+    }
+
+
+    .daytime-item h3 {
+        font-size: 20px;
+    }
+
+
+    .daytime-item p {
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    #gallery {
+        padding: 75px 0;
+    }
+
+
+    .img-gallery {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 250px;
+
+        gap: 12px;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    #contact {
+        padding: 75px 0;
+    }
+
+
+    .contact-info h2 {
+        font-size: 40px;
+    }
+
+
+    .contact-info > p {
+        font-size: 12px;
+    }
+
+
+    #contact-form {
+        padding: 23px 18px;
+
+        border-radius: 22px;
+    }
+
+
+    .form-header h3 {
+        font-size: 27px;
+    }
+
+
+    .input-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    #footer {
+        padding-top: 40px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+
+    .footer-links {
+        gap: 12px 18px;
+    }
+
+
+    /* =====================================================
+       BACK TO TOP
+    ===================================================== */
+
+    #backToTop {
+        right: 15px;
+
+        bottom: 15px;
+
+        width: 42px;
+
+        height: 42px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    /* =====================================================
+       BRAND
+    ===================================================== */
+
+    .brand {
+        font-size: 18px;
+    }
+
+
+    .brand img {
+        width: 33px;
+        height: 33px;
+    }
+
+
+    /* =====================================================
+       HAMBURGER
+    ===================================================== */
+
+    #hamburger {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    #navbar {
+        height: 62px;
+
+        padding: 0 12px;
+    }
+
+
+    #navbar.scrolled {
+        height: 60px;
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    #nav-links {
+        right: 11px;
+
+        width: 185px;
+
+        max-width: calc(100vw - 22px);
+
+        padding: 5px;
+
+        border-radius: 12px;
+    }
+
+
+    /* =====================================================
+       EXTRA SMALL LINKS
+    ===================================================== */
+
+    #nav-links a {
+        min-height: auto;
+
+        padding: 6px 9px;
+
+        font-size: 11px;
+
+        border-radius: 6px;
+    }
+
+
+    #nav-links a:hover {
+        padding-left: 9px;
+
+        transform: translateX(2px);
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    #home {
+        padding-top: 90px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+
+    /* =====================================================
+       HERO INFO
+    ===================================================== */
+
+    .hero-info {
+        gap: 10px;
+    }
+
+
+    .hero-info strong {
+        font-size: 16px;
+    }
+
+
+    .hero-info span {
+        font-size: 6px;
+    }
+
+
+    /* =====================================================
+       DAYTIME
+    ===================================================== */
+
+    .daytime-items {
+        grid-template-columns: 1fr;
+    }
+
+
+    .daytime-item img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
     }
 }

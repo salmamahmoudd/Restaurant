@@ -1,258 +1,943 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon">
-    <title>Tasteify Restaurant</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./media.css">
-</head>
-<body>
-    <!-- Header -->
-    <header id="home">
-       <div id="navbar">
-        <img src="./images/logo.jpg" alt="logo">
-         <nav>
-        <ul id="nav-links" class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-       </nav>
-    <div id="hamburger"><i class="fa fa-bars"></i></div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <div class="content">
-            <h1>Welcome to <span class="primary-text">Tasteify</span></h1>
-            <p>Delicious meals, fresh ingredients, happy taste!</p>
-            <a href="#contact" class="btn">Book a Table</a>
+    <meta
+      name="description"
+      content="Tasteify — a modern restaurant experience with fresh ingredients, delicious meals, and unforgettable flavors."
+    />
+
+    <link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon" />
+
+    <title>Tasteify | Modern Restaurant</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./media.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+    <nav id="navbar" aria-label="Main Navigation">
+      <a href="#home" class="brand">
+        <img src="./images/logo.jpg" alt="Tasteify Logo" />
+        <span>Tasteify</span>
+      </a>
+
+      <ul id="nav-links">
+        <li>
+          <a href="#home" class="active">Home</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#offers">Offers</a>
+        </li>
+
+        <li>
+          <a href="#menu">Menu</a>
+        </li>
+
+        <li>
+          <a href="#gallery">Gallery</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <a href="#contact" class="nav-btn">
+        Book a Table
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button
+        id="hamburger"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+    <header id="home">
+      <div class="hero-content">
+        <span class="hero-tag">
+          <i class="fa-solid fa-utensils"></i>
+          PREMIUM DINING EXPERIENCE
+        </span>
+
+        <h1>
+          Taste The
+          <span>Extraordinary</span>
+        </h1>
+
+        <p>
+          Fresh ingredients, unforgettable flavors, and beautifully crafted
+          dishes made to turn every meal into a special moment.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">
+            Explore Menu
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a href="#about" class="btn btn-outline"> Our Story </a>
         </div>
+
+        <div class="hero-info">
+          <div>
+            <strong>25+</strong>
+            <span>Years Experience</span>
+          </div>
+
+          <div class="hero-divider"></div>
+
+          <div>
+            <strong>50+</strong>
+            <span>Signature Dishes</span>
+          </div>
+
+          <div class="hero-divider"></div>
+
+          <div>
+            <strong>4.9</strong>
+            <span>Guest Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator">
+        <span>Scroll to explore</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
     </header>
 
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
     <main>
-        <!-- About -->
-        <section id="about" class="section-title">
-            <div class="container">
-                <div class="title">
-                    <h2>Our Story</h2>
-                    <p>More than 25+ years of experience</p>
-                </div>
-                <div class="about-content">
-                    <div>
-                        <p>We craft delicious meals with love and the freshest ingredients, making every bite a joyful experience.</p>
-                        <p>Tasteify is all about flavor, freshness, and creating moments you'll remember with every meal.</p>
-                        <a href="#menu" class="btn">LEARN MORE</a>
-                    </div>
-                    <img src="./images/about.png" alt="about">
-                </div>
-            </div>
-        </section>
-
-        <!-- Offers -->
-        <section id="offers" class="section-title">
-            <div class="container">
-                <div class="title">
-                    <h2>Our Special Offers</h2>
-                    <p>Exclusive deals with delicious flavors you’ll love.</p>
-                </div>
-                <div class="offers-items">
-                    <div>
-                        <img src="./images/Quattro-Pasta.jpg" alt="Quattro Pasta">
-                        <h3>Quattro Pasta</h3>
-                        <p>Rich creamy pasta with four delicious cheeses.</p>
-                        <p><del>$55.00</del> <span class="primary-text">$18.00</span></p>
-                    </div>
-                    <div>
-                        <img src="./images/Vegertarian-Pasta.jpg" alt="Vegertarian Pasta">
-                        <h3>Vegertarian Pasta</h3>
-                        <p>Healthy pasta with fresh vegetables and natural flavors.</p>
-                        <p><del>$55.00</del> <span class="primary-text">$18.00</span></p>
-                    </div>
-                    <div>
-                        <img src="./images/Gluten-Free Pasta.jpg" alt="Gluten-Free Pasta">
-                        <h3>Gluten-Free Pasta</h3>
-                        <p>Delicious gluten-free pasta with fresh flavors.</p>
-                        <p><del>$55.00</del> <span class="primary-text">$18.00</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Menu -->
-      <section id="menu" class="section-title">
+      <!-- ===================================================
+           ABOUT
+      ==================================================== -->
+      <section id="about">
         <div class="container">
-        <div class="title">  
-            <h2>Our Special Menu</h2>
-            <p>Order two and get the third for free</p>
+          <div class="section-heading">
+            <span class="eyebrow"> OUR STORY </span>
+
+            <h2>
+              More Than Food.
+              <span>It's An Experience.</span>
+            </h2>
+
+            <p>
+              Discover the passion, creativity, and love behind every plate we
+              serve.
+            </p>
+          </div>
+
+          <div class="about-content">
+            <div class="about-image">
+              <img
+                src="./images/about.png"
+                alt="Tasteify restaurant"
+                loading="lazy"
+              />
+
+              <div class="experience-card">
+                <strong>25+</strong>
+
+                <span>
+                  Years of<br />
+                  Excellence
+                </span>
+              </div>
+            </div>
+
+            <div class="about-text">
+              <span class="small-label"> WELCOME TO TASTEIFY </span>
+
+              <h3>Crafted with passion, served with love.</h3>
+
+              <p>
+                At Tasteify, we believe that great food is more than just a
+                meal. It is a moment, a memory, and an experience worth sharing.
+              </p>
+
+              <p>
+                From carefully selected ingredients to our signature recipes,
+                every detail is thoughtfully prepared by our passionate kitchen
+                team.
+              </p>
+
+              <div class="about-features">
+                <div>
+                  <i class="fa-solid fa-leaf"></i>
+
+                  <div>
+                    <strong>Fresh Ingredients</strong>
+                    <span>Selected with care</span>
+                  </div>
+                </div>
+
+                <div>
+                  <i class="fa-solid fa-kitchen-set"></i>
+
+                  <div>
+                    <strong>Expert Chefs</strong>
+                    <span>Crafted with passion</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#menu" class="btn btn-primary">
+                Discover Our Menu
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="menu-items">
-            <!-- Item 1 -->
-            <div class="menu-item">
-                <img src="./images/food 1.jpg" alt="Mushroom Pizza">
-                <h3>Mushroom Pizza <span class="primary-text">$18.00</span></h3>
-                <p>A tasty pizza with crispy crust, tomato sauce, mozzarella, mushrooms & Italian herbs.</p>
-            </div>
-            <!-- Item 2 -->
-            <div class="menu-item">
-                <img src="./images/food 2.jpg" alt="Cheese Fries">
-                <h3>Cheese Fries <span class="primary-text">$24.00</span></h3>
-                <p>Crispy golden fries topped with melted cheese and special seasonings.</p>
-            </div>
-            <!-- Item 3 -->
-            <div class="menu-item">
-                <img src="./images/food 3.jpg" alt="Burger">
-                <h3>Burger <span class="primary-text">$30.00</span></h3>
-                <p>Grilled beef patty in soft bun with lettuce, tomato, cheese & house sauce.</p>
-            </div>
-            <!-- Item 4 -->
-            <div class="menu-item">
-                <img src="./images/food 4.jpg" alt="Fried Chicken">
-                <h3>Fried Chicken <span class="primary-text">$19.00</span></h3>
-                <p>Crispy fried chicken with special spices, golden outside, juicy inside.</p>
-            </div>
-            <!-- Item 5 -->
-            <div class="menu-item">
-                <img src="./images/food 5.jpg" alt="Chicken Wrap">
-                <h3>Chicken Wrap <span class="primary-text">$14.00</span></h3>
-                <p>Grilled chicken in flatbread with cheese, vegetables, pickles & special sauce.</p>
-            </div>
-            <!-- Item 6 -->
-            <div class="menu-item">
-                <img src="./images/food 6.jpg" alt="Hot Dog">
-                <h3>Hot Dog <span class="primary-text">$20.00</span></h3>
-                <p>Grilled hot dog in soft bun with mustard, ketchup & fresh onions.</p>
-            </div>
-            <!-- Item 7 -->
-            <div class="menu-item">
-                <img src="./images/food 7.jpg" alt="Grilled Cheese Toast">
-                <h3>Grilled Cheese Toast <span class="primary-text">$12.00</span></h3>
-                <p>Toasted bread with melted cheese, lightly buttered for extra flavor.</p>
-            </div>
-            <!-- Item 8 -->
-            <div class="menu-item">
-                <img src="./images/food 8.jpg" alt="Shish Tawook">
-                <h3>Shish Tawook <span class="primary-text">$27.00</span></h3>
-                <p>Marinated chicken cubes grilled with fresh veggies & garlic sauce.</p>
-            </div>
-            <!-- Item 9 -->
-            <div class="menu-item">
-                <img src="./images/food 9.jpg" alt="Steak">
-                <h3>Steak <span class="primary-text">$25.00</span></h3>
-                <p>Grilled steak with seasoned vegetables and rich gravy.</p>
-            </div>
-            <!-- Item 10 -->
-            <div class="menu-item">
-                <img src="./images/food 10.jpg" alt="Breaded Chicken">
-                <h3>Breaded Chicken <span class="primary-text">$18.00</span></h3>
-                <p>Crispy breaded chicken fillets with fresh salad and dipping sauce.</p>
-            </div>
-            <!-- Item 11 -->
-            <div class="menu-item">
-                <img src="./images/food 11.jpg" alt="Korean Chicken">
-                <h3>Korean Chicken <span class="primary-text">$20.00</span></h3>
-                <p>Crispy chicken tossed in sweet & spicy Korean sauce with sesame seeds.</p>
-            </div>
-            <!-- Item 12 -->
-             <div class="menu-item">
-                <img src="./images/food 12.jpg" alt="Indian Chicken">
-                <h3>Indian Chicken <span class="primary-text">$22.00</span></h3>
-                <p>Chicken cooked with Indian spices, creamy sauce, served with rice or veggies.</p>
-            </div>
+      </section>
+
+      <!-- ===================================================
+           OFFERS
+      ==================================================== -->
+      <section id="offers">
+        <div class="container">
+          <div class="section-heading light">
+            <span class="eyebrow"> SPECIAL OFFERS </span>
+
+            <h2>
+              Delicious Deals,
+              <span>Made For You.</span>
+            </h2>
+
+            <p>Enjoy our chef-selected favorites at special prices.</p>
+          </div>
+
+          <div class="offers-items">
+            <article class="offer-card">
+              <div class="offer-image">
+                <img
+                  src="./images/Quattro-Pasta.jpg"
+                  alt="Quattro Pasta"
+                  loading="lazy"
+                />
+
+                <span class="offer-badge"> -67% </span>
+              </div>
+
+              <div class="offer-content">
+                <span class="offer-category"> CHEF'S FAVORITE </span>
+
+                <h3>Quattro Pasta</h3>
+
+                <p>
+                  Rich creamy pasta with four delicious cheeses and Italian
+                  herbs.
+                </p>
+
+                <div class="price">
+                  <del>$55.00</del>
+                  <strong>$18.00</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="offer-card">
+              <div class="offer-image">
+                <img
+                  src="./images/Vegertarian-Pasta.jpg"
+                  alt="Vegetarian Pasta"
+                  loading="lazy"
+                />
+
+                <span class="offer-badge"> -67% </span>
+              </div>
+
+              <div class="offer-content">
+                <span class="offer-category"> FRESH CHOICE </span>
+
+                <h3>Vegetarian Pasta</h3>
+
+                <p>
+                  Healthy pasta prepared with fresh vegetables and natural
+                  flavors.
+                </p>
+
+                <div class="price">
+                  <del>$55.00</del>
+                  <strong>$18.00</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="offer-card">
+              <div class="offer-image">
+                <img
+                  src="./images/Gluten-Free Pasta.jpg"
+                  alt="Gluten Free Pasta"
+                  loading="lazy"
+                />
+
+                <span class="offer-badge"> -67% </span>
+              </div>
+
+              <div class="offer-content">
+                <span class="offer-category"> HEALTHY CHOICE </span>
+
+                <h3>Gluten-Free Pasta</h3>
+
+                <p>
+                  Delicious gluten-free pasta packed with fresh and satisfying
+                  flavors.
+                </p>
+
+                <div class="price">
+                  <del>$55.00</del>
+                  <strong>$18.00</strong>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-        <!-- Daytime -->
-        <section id="daytime">
-            <div class="container">
-                <div class="daytime-items">
-                    <div class="daytime-item">
-                        <img src="./images/breakfaet.jpg" alt="Breakfast">
-                        <h3>Breakfast</h3>
-                        <p>8:00 am to 10:00 am</p>
-                    </div>
-                    <div class="daytime-item">
-                        <img src="./images/lunch.jpg" alt="Lunch">
-                        <h3>Lunch</h3>
-                        <p>4:00 pm to 7:00 pm</p>
-                    </div>
-                    <div class="daytime-item">
-                        <img src="./images/dinner.jpg" alt="Dinner">
-                        <h3>Dinner</h3>
-                        <p>9:00 pm to 1:00 am</p>
-                    </div>
-                    <div class="daytime-item">
-                        <img src="./images/dessert.jpg" alt="Dessert">
-                        <h3>Dessert</h3>
-                        <p>All day</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- ===================================================
+           MENU
+      ==================================================== -->
+      <section id="menu">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow"> OUR MENU </span>
 
-        <!-- Gallery -->
-        <section id="gallery" class="section-title">
-            <div class="container">
-                <h2>Our Food Gallery</h2>
-                <div class="img-gallery">
-                    <img src="./images/gallery 1.jpg" alt="gallery 1">
-                    <img src="./images/gallery 2.jpg" alt="gallery 2">
-                    <img src="./images/gallery 3.jpg" alt="gallery 3">
-                    <img src="./images/gallery 4.jpg" alt="gallery 4">
-                    <img src="./images/gallery 5.jpg" alt="gallery 5">
-                    <img src="./images/gallery 6.jpg" alt="gallery 6">
-                </div>
-            </div>
-        </section>
+            <h2>
+              Discover Our
+              <span>Signature Dishes.</span>
+            </h2>
 
-        <!-- Contact -->
-        <section id="contact">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div>
-                            <h3>ADDRESS</h3>
-                            <p><i class="fa-solid fa-location-dot"></i> 5th Settlement, Egypt</p>
-                            <p><i class="fa-solid fa-phone"></i> Phone: 123456789</p>
-                            <p><i class="fa-regular fa-envelope"></i> support@tasteify.com</p>
-                        </div>
-                        <div>
-                            <h3>WORKING HOURS</h3>
-                            <p>8:00 am to 11:00 pm on Weekdays</p>
-                            <p>11:00 am to 1:00 am on Weekends</p>
-                        </div>
-                        <div>
-                            <h3>FOLLOW US</h3>
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <form>
-                        <input type="text" name="Name" placeholder="Full Name" required>
-                        <input type="email" name="Email" placeholder="Email Address" required>
-                        <input type="text" name="Subject" placeholder="Subject" required>
-                        <textarea name="Message" cols="30" rows="5" placeholder="Message"></textarea>
-                        <button type="submit" class="btn">SEND MESSAGE</button>
-                    </form>
-                </div>
+            <p>Handcrafted dishes prepared from fresh ingredients.</p>
+          </div>
+
+          <div class="menu-items">
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 1.jpg"
+                  alt="Mushroom Pizza"
+                  loading="lazy"
+                />
+                <span>$18</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Mushroom Pizza</h3>
+
+                <p>
+                  Crispy crust, tomato sauce, mozzarella, mushrooms and Italian
+                  herbs.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 2.jpg"
+                  alt="Cheese Fries"
+                  loading="lazy"
+                />
+                <span>$24</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Cheese Fries</h3>
+
+                <p>
+                  Crispy golden fries topped with melted cheese and special
+                  seasoning.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 3.jpg"
+                  alt="Signature Burger"
+                  loading="lazy"
+                />
+                <span>$30</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Signature Burger</h3>
+
+                <p>
+                  Grilled beef patty, soft bun, fresh vegetables, cheese and
+                  house sauce.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 4.jpg"
+                  alt="Fried Chicken"
+                  loading="lazy"
+                />
+                <span>$19</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Fried Chicken</h3>
+
+                <p>
+                  Crispy fried chicken with special spices, golden outside and
+                  juicy inside.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 5.jpg"
+                  alt="Chicken Wrap"
+                  loading="lazy"
+                />
+                <span>$14</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Chicken Wrap</h3>
+
+                <p>
+                  Grilled chicken with cheese, vegetables, pickles and our
+                  special sauce.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 6.jpg"
+                  alt="Classic Hot Dog"
+                  loading="lazy"
+                />
+                <span>$20</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Classic Hot Dog</h3>
+
+                <p>
+                  Grilled hot dog served in a soft bun with mustard, ketchup and
+                  onions.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 7.jpg"
+                  alt="Grilled Cheese Toast"
+                  loading="lazy"
+                />
+                <span>$12</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Grilled Cheese Toast</h3>
+
+                <p>
+                  Toasted bread with melted cheese and a buttery golden finish.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 8.jpg"
+                  alt="Shish Tawook"
+                  loading="lazy"
+                />
+                <span>$27</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Shish Tawook</h3>
+
+                <p>
+                  Marinated chicken cubes grilled with fresh vegetables and
+                  garlic sauce.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 9.jpg"
+                  alt="Grilled Steak"
+                  loading="lazy"
+                />
+                <span>$25</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Grilled Steak</h3>
+
+                <p>
+                  Premium grilled steak served with seasoned vegetables and rich
+                  gravy.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 10.jpg"
+                  alt="Breaded Chicken"
+                  loading="lazy"
+                />
+                <span>$18</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Breaded Chicken</h3>
+
+                <p>
+                  Crispy breaded chicken fillets with fresh salad and dipping
+                  sauce.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 11.jpg"
+                  alt="Korean Chicken"
+                  loading="lazy"
+                />
+                <span>$20</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Korean Chicken</h3>
+
+                <p>
+                  Crispy chicken tossed in sweet and spicy Korean sauce with
+                  sesame.
+                </p>
+              </div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-image">
+                <img
+                  src="./images/food 12.jpg"
+                  alt="Indian Chicken"
+                  loading="lazy"
+                />
+                <span>$22</span>
+              </div>
+
+              <div class="menu-content">
+                <h3>Indian Chicken</h3>
+
+                <p>
+                  Chicken cooked with aromatic Indian spices and a creamy
+                  signature sauce.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           DAYTIME
+      ==================================================== -->
+      <section id="daytime">
+        <div class="container">
+          <div class="section-heading light">
+            <span class="eyebrow"> OPENING HOURS </span>
+
+            <h2>
+              Your Favorite Time
+              <span>Of The Day.</span>
+            </h2>
+          </div>
+
+          <div class="daytime-items">
+            <div class="daytime-item">
+              <div class="daytime-icon">
+                <i class="fa-solid fa-mug-hot"></i>
+              </div>
+
+              <img
+                src="./images/breakfaet.jpg"
+                alt="Breakfast"
+                loading="lazy"
+              />
+
+              <h3>Breakfast</h3>
+              <p>8:00 AM — 10:00 AM</p>
             </div>
-        </section>
+
+            <div class="daytime-item">
+              <div class="daytime-icon">
+                <i class="fa-solid fa-bowl-food"></i>
+              </div>
+
+              <img src="./images/lunch.jpg" alt="Lunch" loading="lazy" />
+
+              <h3>Lunch</h3>
+              <p>4:00 PM — 7:00 PM</p>
+            </div>
+
+            <div class="daytime-item">
+              <div class="daytime-icon">
+                <i class="fa-solid fa-moon"></i>
+              </div>
+
+              <img src="./images/dinner.jpg" alt="Dinner" loading="lazy" />
+
+              <h3>Dinner</h3>
+              <p>9:00 PM — 1:00 AM</p>
+            </div>
+
+            <div class="daytime-item">
+              <div class="daytime-icon">
+                <i class="fa-solid fa-cake-candles"></i>
+              </div>
+
+              <img src="./images/dessert.jpg" alt="Dessert" loading="lazy" />
+
+              <h3>Dessert</h3>
+              <p>Available All Day</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           GALLERY
+      ==================================================== -->
+      <section id="gallery">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow"> FOOD GALLERY </span>
+
+            <h2>
+              A Feast For
+              <span>Your Eyes.</span>
+            </h2>
+
+            <p>A glimpse of the flavors waiting for you.</p>
+          </div>
+
+          <div class="img-gallery">
+            <div class="gallery-item">
+              <img
+                src="./images/gallery 1.jpg"
+                alt="Food gallery 1"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="./images/gallery 2.jpg"
+                alt="Food gallery 2"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="./images/gallery 3.jpg"
+                alt="Food gallery 3"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="./images/gallery 4.jpg"
+                alt="Food gallery 4"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="./images/gallery 5.jpg"
+                alt="Food gallery 5"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img
+                src="./images/gallery 6.jpg"
+                alt="Food gallery 6"
+                loading="lazy"
+              />
+
+              <div class="gallery-overlay">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           CONTACT
+      ==================================================== -->
+      <section id="contact">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <span class="eyebrow"> GET IN TOUCH </span>
+
+              <h2>
+                Let's Make Your
+                <span>Next Meal Special.</span>
+              </h2>
+
+              <p>
+                Ready for an unforgettable dining experience? Reserve your table
+                or send us a message.
+              </p>
+
+              <div class="contact-details">
+                <div class="contact-detail">
+                  <i class="fa-solid fa-location-dot"></i>
+
+                  <div>
+                    <span>ADDRESS</span>
+                    <strong>5th Settlement, Egypt</strong>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <i class="fa-solid fa-phone"></i>
+
+                  <div>
+                    <span>PHONE</span>
+                    <strong>123456789</strong>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <i class="fa-regular fa-envelope"></i>
+
+                  <div>
+                    <span>EMAIL</span>
+                    <strong>support@tasteify.com</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <a href="#" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+
+            <form id="contact-form">
+              <div class="form-header">
+                <span>RESERVATION</span>
+
+                <h3>Book Your Table</h3>
+              </div>
+
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="name"> Full Name </label>
+
+                  <input
+                    type="text"
+                    id="name"
+                    name="Name"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+
+                <div class="input-group">
+                  <label for="email"> Email Address </label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    placeholder="Your email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="date"> Date </label>
+
+                  <input type="date" id="date" name="Date" required />
+                </div>
+
+                <div class="input-group">
+                  <label for="guests"> Guests </label>
+
+                  <select id="guests" name="Guests">
+                    <option value="1">1 Guest</option>
+
+                    <option value="2">2 Guests</option>
+
+                    <option value="3">3 Guests</option>
+
+                    <option value="4">4 Guests</option>
+
+                    <option value="5">5 Guests</option>
+
+                    <option value="6">6+ Guests</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="message"> Message </label>
+
+                <textarea
+                  id="message"
+                  name="Message"
+                  rows="5"
+                  placeholder="Tell us anything we should know..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Reserve My Table
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <p id="form-message"></p>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
     <footer id="footer">
-        <p>Copyright &copy; 2023 All rights reserved | Made by 
-        <b><a href="https://salmamahmoudd.github.io/Portfolio/" target="_blank">Salma Mahmoud</a></b></p>
+      <div class="container">
+        <div class="footer-content">
+          <a href="#home" class="footer-brand">
+            <img src="./images/logo.jpg" alt="Tasteify Logo" />
+
+            <span> Tasteify </span>
+          </a>
+
+          <p>Great food. Great moments. Great memories.</p>
+
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Tasteify. All rights reserved.</p>
+
+          <p>
+            Designed & Developed by
+
+            <a
+              href="https://salmamahmoudd.github.io/Portfolio/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Salma Mahmoud
+            </a>
+          </p>
+        </div>
+      </div>
     </footer>
 
- <script src="./index.js"></script>
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+    <button id="backToTop" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-</body>
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+    <script src="./index.js"></script>
+  </body>
 </html>
